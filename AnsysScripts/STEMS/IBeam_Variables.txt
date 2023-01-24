@@ -1,0 +1,8 @@
+Name	Value	Unit	"Evaluated Value"
+$beam_width	127	mm	127mm
+$flange_height	7.62	mm	7.62mm
+$total_height	127	mm	127mm
+$internal_beam_width	7.9502	mm	7.9502mm
+$internal_beam_height	$total_height-(2*$flange_height)		111.76mm
+$beam_length	0.5	meter	0.5meter
+$flange_length	($beam_width/2)-($internal_beam_width/2)		59.5249mm

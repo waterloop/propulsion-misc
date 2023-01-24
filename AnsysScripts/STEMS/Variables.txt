@@ -1,0 +1,33 @@
+Name	Value	Unit	"Evaluated Value"
+$total_width	50	mm	50mm
+$edge_length	20	mm	20mm
+$tooth_length	20	mm	20mm
+$slot_length	20	mm	20mm
+$slot_depth	20	mm	20mm
+$yoke_depth	50	mm	50mm
+$total_height	$slot_depth+$yoke_depth		70mm
+$slot_gap	$slot_length+$tooth_length		40mm
+$total_length	($slot_number-1)*($slot_gap)+2*$edge_length+$slot_length		420mm
+$coil_inner_width	$total_width+$coil_gap		50mm
+$coil_outer_width	$total_width+15mm		65mm
+$coil_inner_height	$total_height-$slot_depth+$coil_gap		50mm
+$coil_outer_height	$coil_inner_height+10mm		60mm
+$coil_length	$slot_length		20mm
+$coil_gap	0	mm	0mm
+$outer_coil_x	($coil_outer_width-$coil_inner_width)/2		7.5mm
+$outer_coil_z	($coil_outer_height-$coil_inner_height)/2		5mm
+$coil_filet	10	mm	10mm
+$input_voltage	45	V	45V
+$coil_resistance	10	ohm	10ohm
+$coil_inductance	5	H	5H
+$edge_volume	$edge_length*$total_height*$total_width		7e-005
+$tooth_volume	$tooth_length*$total_height*$total_width		7e-005
+$slot_volume	($total_height-$slot_depth)*$slot_length*$total_width		5e-005
+$slot_number	10		10
+$beam_width	127	mm	127mm
+$flange_height	7.62	mm	7.62mm
+$beam_height	127	mm	127mm
+$internal_beam_width	7.9502	mm	7.9502mm
+$internal_beam_height	$beam_height-(2*$flange_height)		111.76mm
+$beam_length	0.5	meter	0.5meter
+$flange_length	($beam_width/2)-($internal_beam_width/2)		59.5249mm
