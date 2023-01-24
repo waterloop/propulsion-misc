@@ -8,4 +8,4 @@ Each directory contains its own README
     - LIMxFlyWheel - automatically sets up the flywheel simulation without boundary conditions
     - STEMS
         - The individual scripts extracted from Ansys recordings to develop the automated workflow. 
-
+- Encoder Readings - Associated arduino code for reading RPM data off the encoder
