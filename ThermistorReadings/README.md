@@ -10,3 +10,4 @@
 6. To stop logging, close the terminal window 
 7. Clean up the log by truncating the first and last row of the new .csv file
     7a. First row should be "Therm1,Therm2,Therm3,Therm4,..."
+(https://github.com/waterloop/propulsion-misc/ThermistorReadings/ThermistorWiring.PNG?raw=true)
