@@ -1,3 +1,9 @@
+/* Read Quadrature Encoder
+   Connect Encoder to Pins encoder0PinA, encoder0PinB, and +5V.
+   Sketch by max wolf / www.meso.net
+   v. 0.1 - very basic functions - mw 20061220
+*/
+
 int val;
 int encoder0PinA = 3;
 int encoder0PinB = 2;
@@ -10,17 +16,16 @@ unsigned long rotationTime = 0;
 int period = 0;
 double revCount = 0;
 double rpm = 0;
-double Lvelocity = 0;
 int n = LOW;
 
 void setup() {
   pinMode (encoder0PinA, INPUT);
   pinMode (encoder0PinB, INPUT);
   Serial.begin (9600);
-  Serial.println("Rotations/Minute,Time");
 }
 
 void loop() {
+  // Increments position
   n = digitalRead(encoder0PinA);
   if ((encoder0PinALast == LOW) && (n == HIGH)) {
     if (digitalRead(encoder0PinB) == LOW) {
@@ -28,26 +33,24 @@ void loop() {
     } else {
       encoder0Pos++; //CW
     }
-    
-  }  
-  currentMillis = millis(); 
-  if (abs(encoder0Pos) == clicksPerRev) {  
+    //Uncomment to print position of every click
+    //Serial.print (encoder0Pos);
+    //Serial.print ("/");
+  }
+
+  // Gives decimal vlue for #rotations
+  //revCount = encoder0Pos / clicksPerRev;
+
+  // After 1 minute print the number of revolutions in the serial panel
+  currentMillis = millis();  //get time since program started
+  if (abs(encoder0Pos) == clicksPerRev) {  //test whether the rotation has elapsed
     
     rotationTime = millis() - startMillis;
     rpm = 60000/rotationTime;
-    //Lvelocity = (0.01595929068 * rpm);//this not so random number (0.0158) is (pi*diameter(meter))/60 ... the flywheel has a diameter of 12 inches so 0.3048 meters
-    Lvelocity = (0.01529432024 * rpm);//diamter is 11.5 inches
-    
-    Serial.print(rpm);
-    Serial.print(",");
-//    Serial.println (rpm);
-   // Serial.print("Meters/Second: ");
-  //  Serial.println(Lvelocity);
-    Serial.print(millis());
-    Serial.println("");
+    Serial.println (rpm);
     
     encoder0Pos = 0;
-    startMillis = currentMillis; 
+    startMillis = currentMillis;  //IMPORTANT to save the start time of the current LED state.
   }
   encoder0PinALast = n;
 }
