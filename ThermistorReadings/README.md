@@ -12,4 +12,3 @@
     7a. First row should be "Therm1,Therm2,Therm3,Therm4,..."
 
 Additional resources can be found on [Google Drive](https://drive.google.com/drive/folders/1YmJ3xWW2S37qAnZtqaWsI0HqgEOOfY0c?usp=share_link)
-(https://github.com/waterloop/propulsion-misc/ThermistorReadings/ThermistorWiring.PNG?raw=true)
