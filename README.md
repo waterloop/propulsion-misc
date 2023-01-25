@@ -9,3 +9,4 @@ Each directory contains its own README
     - STEMS
         - The individual scripts extracted from Ansys recordings to develop the automated workflow. 
 - Encoder Readings - Associated arduino code for reading RPM data off the encoder
+- Thermistor Readings - Associated arduino code for collecting temperature data from the thermistor circuit
